@@ -1,0 +1,110 @@
+/* Add your custom styles here */
+
+.hero {
+  background-image: url("bg.jpg");
+  background-size: 20px;
+  background-position: center;
+  padding: 100px 0;
+  text-align: center;
+  color: #000000;
+}
+
+.hero h1 {
+  font-size: 100px;
+  margin-bottom: 5px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/* Add your custom styles here */
+
+/* ... existing styles ... */
+
+.menu-section {
+  position: relative; 
+  z-index: 1; 
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.menu-section:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  opacity: 0.7; 
+  z-index: -1;
+}
+
+.menu-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.menu-section .card {
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.8); /*  this line to make the cards semi-transparent */
+  border-radius: 10px; /* this line for rounded corners */
+  padding: 20px; /*this line for some spacing within the cards */
+}
+
+.locations-section {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.locations-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.locations-section .card {
+  margin-bottom: 30px;
+}
+
+.contact-section {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-section form {
+  margin-top: 30px;
+}
+
+/* Custom styles for the index page */
+.index-hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 200px 0;
+  text-align: center;
+  color: #000000;
+}
+
+.index-hero h1 {
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+
+.index-hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.mascot{
+  max-width: 200px; /* Adjust the value as needed */
+  height: auto;
+}
