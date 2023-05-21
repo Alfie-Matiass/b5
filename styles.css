@@ -1,5 +1,8 @@
 /* Add your custom styles here */
 
+.bg-custom{
+  background-color: #dfbdaa; /* Set your custom background color */
+}
 .hero {
   background-image: url("bg.jpg");
   background-size: 20px;
@@ -8,7 +11,14 @@
   text-align: center;
   color: #000000;
 }
+/* Menu and location links hover effect */
+.nav-item .nav-link:hover {
+  color: #5087ff; /* Set your desired hover color */
+}
 
+.nav-custom .nav-brand{
+  color: #050505;
+}
 .hero h1 {
   font-size: 100px;
   margin-bottom: 5px;
@@ -28,7 +38,7 @@
   z-index: 1; 
   padding: 100px 0;
   text-align: center;
-  color: #fff;
+  color: #000000;
 }
 
 .menu-section:before {
@@ -108,3 +118,7 @@
   max-width: 200px; /* Adjust the value as needed */
   height: auto;
 }
+
+
+
+
