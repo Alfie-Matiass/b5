@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cart</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="cart.css">
+  <style>
+    /* Your custom CSS styles here */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Cart</h1>
+
+      <div id="cartItems"></div>
+
+      <button class="btn btn-success btn-checkout" onclick="redirectToCheckout()">Confirm Checkout</button>
+      <button class="btn btn-secondary btn-go-back" onclick="redirectToHome()">Go Back</button>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JavaScript dependencies (jQuery and Popper.js) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      displayCartItems();
+    });
+
+    // Function to retrieve cart items from sessionStorage and display them
+    function displayCartItems() {
+      var cartItems = sessionStorage.getItem("cartItems");
+      if (cartItems) {
+        cartItems = JSON.parse(cartItems);
+        var cartItemsDiv = $("#cartItems");
+        if (cartItems.length > 0) {
+          var itemList = "<ul>";
+          cartItems.forEach(function(item) {
+            itemList += "<li>" + item + "</li>";
+          });
+          itemList += "</ul>";
+          cartItemsDiv.html(itemList);
+        } else {
+          cartItemsDiv.html("<p>Your cart is empty.</p>");
+        }
+      } else {
+        $("#cartItems").html("<p>Your cart is empty.</p>");
+      }
+    }
+
+    // Function to redirect to checkout.html
+    function redirectToCheckout() {
+      window.location.href = "checkout.html";
+    }
+
+    // Function to redirect to index.html
+    function redirectToHome() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
